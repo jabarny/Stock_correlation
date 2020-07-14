@@ -12,7 +12,7 @@ import yfinance as yf,
     2) func -  adds stock returns to a dataframe; returns dataframe
     3) func - creates correlation DF and writes to excel file; return None
     4) func - call all functions
-    
+        
     """
 
 
@@ -32,7 +32,7 @@ def stock_df():
             print(f'If not seeking the "default" dates, ensure both "{start_date}" and "{end_date}" match the "YYYY-MM-DD" format')
             continue
 
-    # time frame
+    # timeframe
     if start_date == 'default':
         start_date = str(dt.datetime.today() - dt.timedelta(weeks=260))[:10]
     if end_date == 'default':
@@ -81,8 +81,5 @@ while 1:
         stocks.append(resp)
     else:
         print(f'Ensure "{resp}" contains ONLY A-Z characters, regardless of capitalization; no integers, spaces, punctuations. ')        
-
-stock_corr()
-
 
 stock_corr()
